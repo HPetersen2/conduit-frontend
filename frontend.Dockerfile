@@ -35,7 +35,7 @@ USER nginx
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
-COPY --chown=nginx:nginx --from=builder /app/dist/*/browser /usr/share/nginx/html
+COPY --chown=nginx:nginx --from=builder /app/dist/angular-conduit/ /usr/share/nginx/html/
 
 # nginx-unprivileged hört auf 8080
 EXPOSE 4200
